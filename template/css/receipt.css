@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font: 16px/1.5 VT323, monospace;
+}
+
+.receipt {
+  width: 20em;
+  box-shadow: 0 0.2em 1em 0.2em rgba(0, 0, 0, 0.2);
+  border: 1px dotted white;
+  border-width: 1px 0;
+}
+.receipt .paper {
+  padding: 3em 1.5em;
+  background: white;
+}
+.receipt h1 {
+  font-size: 150%;
+  margin: 0;
+}
+.receipt h1,
+.receipt .event {
+  text-align: center;
+  line-height: 1;
+}
+.receipt dl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 1.5em 0 0;
+}
+.receipt dt,
+.receipt dd {
+  margin: 0;
+  width: 50%;
+}
+.receipt dd {
+  text-align: right;
+}
+.receipt .total {
+  margin: 0;
+}
+.receipt .total:before {
+  content: '-------------------';
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+.receipt .total dt {
+  text-align: right;
+}
+.receipt .total dd {
+  padding-left: .5em;
+  text-align: left;
+}
+
+.printBut {
+  cursor: pointer;
+}
+
+@media print
+{
+  .printBut, .printBut *
+  {
+    display:none !important;
+  }
+}
