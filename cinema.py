@@ -9,8 +9,25 @@ movietime = {'movie1':'2:00 pm','movie2':'4:30 pm','movie3':'7:00 pm','movie4':'
 datetoday = time.strftime("%d/%m/%Y")
 cont = 'y'
 
+#function to empty movieCode.txt,listseat.txt,receipt.php,tickets.php
+def emptyFiles():
+    empt = open('movieCode.txt','w')
+    empt.write("")
+    empt.close()
+    empt = open('listseat.txt','w')
+    empt.write("")
+    empt.close()
+    empt = open('receipt.php','w')
+    empt.write("")
+    empt.close()
+    empt = open('tickets.php','w')
+    empt.write("")
+    empt.close()
+
 while cont == 'Y' or cont == 'y':
-    os.system('cls')
+    os.system('cls') #clear console
+    emptyFiles() #call empty files function
+    
     print "\n||||||||||||||||||||||||||||||||"
     print "||| WELCOME TO LALANG CINEMA |||"
     print "||||||||||||||||||||||||||||||||"
@@ -30,7 +47,7 @@ while cont == 'Y' or cont == 'y':
         raw_input("\nPress ENTER to continue. The program will open up movie selection list, please wait.")
         print "\n---------------------------------------------------------------------------"
 
-    	#open up webpage
+    	#open up webpage, use Google Chrome
     	webbrowser.get('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s').open('localhost/cinema/')
 
     	#open file to read movie name
@@ -99,6 +116,7 @@ while cont == 'Y' or cont == 'y':
         print "\n-----------------------------------------"
         print "\nThank You! Enjoy Your movie!"
         print "\n-----------------------------------------\n"
+        emptyFiles() #call empty files function
     
     else: 
         break
@@ -107,6 +125,7 @@ while cont == 'Y' or cont == 'y':
 
 else:
     os.system('cls')
+    emptyFiles() #call empty files function
     print "\n======================================"
     print "\n== Thank you for using this system. =="
     print "\n======================================"
