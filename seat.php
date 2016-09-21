@@ -15,7 +15,7 @@
   <form id='chooseSeatForm'>
     <div class="plane">
     <h3>Please choose your seats</h3>
-    Seats Choosen: <input type="text" id="choosenSeats" readonly="readonly"> <button id="confirmBut">Confirm</button>
+    Seats Chosen: <input type="text" id="choosenSeats" readonly="readonly"> <button id="confirmBut">Confirm</button>
 
     <br><br>
   <div class="exit exit--front fuselage">
