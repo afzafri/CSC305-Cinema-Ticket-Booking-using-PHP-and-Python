@@ -2,7 +2,7 @@ import webbrowser
 import os
 import time
 
-os.system('color 80')
+os.system('color F0')
 #declare dictionary movie
 moviename = {'movie1':'Kubo And The Two Strings','movie2':'Suicide Squad','movie3':'Lights Out','movie4':'Train To Busan','movie5':'One Piece Film:Gold'}
 movietime = {'movie1':'2:00 pm','movie2':'4:30 pm','movie3':'7:00 pm','movie4':'9:30 pm','movie5':'12:00 am'}
